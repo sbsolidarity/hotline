@@ -1,5 +1,9 @@
 {
   "account_sid": "",
+  "audio_callback": "",
   "auth_token": "",
-  "callback_url": ""
+  "hostname": "",
+  "phone_number": "",
+  "sms_callback": "/sms",
+  "voice_callback": "/voice"
 }
