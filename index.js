@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static('public'))
+// app.use(express.static('public'))
 
 app.post(TWILIO.audio_callback, multer().array(), handle.audio)
 app.post(TWILIO.confirmation_callback, multer().array(), handle.confirmation)
