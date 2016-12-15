@@ -2,7 +2,9 @@
   "access_token": "",
   "client_id": "",
   "client_secret": "",
-  "expiry_date":,
-  "refresh_token": "",
+  "expiry_date": 0,
+  "recordings_folder_id": "",
+  "refresh_token":"",
+  "reports_folder_id": "",
   "token_type":""
 }
