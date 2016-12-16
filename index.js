@@ -10,7 +10,7 @@ const bodyParser = require('body-parser')
 const multer = require('multer')
 
 app.use(bodyParser.urlencoded({ extended: true }))
-// app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
 
 const handle = require('./lib/handlers.js')
 app.post(TWILIO.audio_callback, multer().array(), handle.audio)
