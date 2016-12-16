@@ -1,0 +1,26 @@
+{
+  "sms": {
+    "confirmation": {
+      "esp": "",
+      "eng": ""
+    },
+    "error": {
+      "esp": "",
+      "eng": ""
+    }
+  },
+  "voice": {
+    "welcome": {
+      "esp": "",
+      "eng": ""
+    },
+    "confirmation": {
+      "esp": "",
+      "eng": ""
+    },
+    "error": {
+      "esp": "",
+      "eng": ""
+    }
+  }
+}
