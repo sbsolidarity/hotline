@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/chriseppstein/sass-css-importer.git
+  revision: 436c7a64aa2f09635deb652263aa1f5e71b7ef92
+  specs:
+    sass-css-importer (1.0.0.beta.0)
+      sass (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -15,6 +22,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
     rake (12.0.0)
+    sass (3.4.22)
     sshkit (1.11.4)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -27,6 +35,7 @@ DEPENDENCIES
   capistrano-npm
   capistrano-passenger
   highline
+  sass-css-importer!
 
 BUNDLED WITH
    1.13.6

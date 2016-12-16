@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 const bodyParser = require('body-parser')
 const multer = require('multer')
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(__dirname + '/public'))
 
 const handle = require('./lib/handlers.js')
 app.get('/', handle.root)

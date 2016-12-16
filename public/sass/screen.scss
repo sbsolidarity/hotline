@@ -1,0 +1,22 @@
+@import 'CSS:../../node_modules/normalize.css/normalize';
+
+// By Abelardo Gonzalez, released under SIL-OFL
+// https://gumroad.com/l/OpenDyslexic
+@font-face {
+  font-family: 'OpenDyslexic3-regular';
+  src: url('/fonts/OpenDyslexic3-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'OpenDyslexic3-bold';
+  src: url('/fonts/OpenDyslexic3-Bold.ttf');
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'OpenDyslexic3-bold';
+}
+
+p {
+  font-family: 'OpenDyslexic3-regular';
+}
