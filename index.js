@@ -1,9 +1,7 @@
-////
-
 const PORT = 3030
+
+// configuration settings for the Twilio API
 const TWILIO = require('./config/twilio.json')
-// handlers
-const handle = require('./lib/handlers.js')
 
 const express = require('express')
 const app = express()
@@ -14,6 +12,7 @@ const multer = require('multer')
 app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(express.static('public'))
 
+const handle = require('./lib/handlers.js')
 app.post(TWILIO.audio_callback, multer().array(), handle.audio)
 app.post(TWILIO.confirmation_callback, multer().array(), handle.confirmation)
 app.post(TWILIO.sms_callback, multer().array(), handle.sms)
