@@ -10,6 +10,7 @@ set :linked_files,
     %w(
       config/application.json
       config/google.json
+      config/lang.json
       config/twilio.json
     )
 
