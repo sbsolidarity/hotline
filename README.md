@@ -23,10 +23,6 @@
 
 #### application.json
 
-##### email
-
-The email address users are instructed to use when the system is down.
-
 ##### hostname
 
 The hostname of the server receiving Twilio requests.
@@ -73,6 +69,10 @@ spreadsheets are saved.
 ##### token_type
 
 Currently unused.
+
+#### lang.json
+
+Localized strings for automated SMS and Voice replies.
 
 #### twilio.json
 

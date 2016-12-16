@@ -1,4 +1,18 @@
 {
+  "website": {
+    "title": {
+      "esp": "",
+      "eng": ""
+    },
+    "description": {
+      "esp": "",
+      "eng": ""
+    },
+    "instructions": {
+      "esp": "",
+      "eng": ""
+    }
+  },
   "sms": {
     "confirmation": {
       "esp": "",
