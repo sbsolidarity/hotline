@@ -8,7 +8,7 @@
   <meta property="og:title" content="<%= title %>" />
   <meta property="og:type" content="website" />
   <!-- http://stackoverflow.com/a/6204025 -->
-  <meta name="description" property="og:description" content="<%= description %>" />
+  <meta name="description" property="og:description" content="<%= short_desc %>" />
   <meta property="og:url" content="https://www.sbsolidarity.org/" />
 
   <title><%= title %></title>
@@ -20,8 +20,8 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="sb-solidarity"><%= title %></h1>
+<header><h1 id="sb-solidarity"><%= title %></h1></header>
 <p class="instructions"><%- instructions %></p>
-<p class="description"><%= description %></p>
+<p class="description"><%= long_desc %></p>
 </body>
 </html>
