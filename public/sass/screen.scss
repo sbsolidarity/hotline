@@ -13,10 +13,72 @@
   font-weight: bold;
 }
 
+$breakpoint: 800px;
+$bg: #0f4880;
+$fg: #fefefe;
+$a: #ffecdb;
+$decoration: #add8e6;
+
+body {
+  font-size: 16pt;
+}
+
 h1 {
+  font-size: 171.5%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 128.5%;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 114.3%;
+}
+
+h6 {
+  font-style: italic;
+}
+
+body > * {
+  font-family: 'OpenDyslexic3-regular';
+  padding: 1em 10em;
+}
+
+@media screen and (max-width: $breakpoint) {
+  body > * {
+    padding: 2%;
+  }
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+}
+
+header,
+.description {
+  background-color: $bg;
+  color: $fg;
+}
+
+h1,
+.contact {
   font-family: 'OpenDyslexic3-bold';
 }
 
-p {
-  font-family: 'OpenDyslexic3-regular';
+.contact {
+  font-size: 114.3%;
+  padding: .5em;
+}
+
+.instructions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
