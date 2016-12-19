@@ -29,8 +29,16 @@
   },
   "voice": {
     "welcome": {
-      "esp": "",
-      "eng": ""
+      "esp": [
+        "",
+        "",
+        ""
+      ],
+      "eng": [
+        "",
+        "",
+        ""
+      ]
     },
     "confirmation": {
       "esp": "",
