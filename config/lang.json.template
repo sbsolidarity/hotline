@@ -1,35 +1,35 @@
 {
   "website": {
     "title": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     },
     "short_desc": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     },
     "long_desc": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     },
     "instructions": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     }
   },
   "sms": {
     "confirmation": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     },
     "error": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     }
   },
   "voice": {
     "welcome": {
-      "esp": [
+      "spa": [
         "",
         "",
         ""
@@ -41,11 +41,11 @@
       ]
     },
     "confirmation": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     },
     "error": {
-      "esp": "",
+      "spa": "",
       "eng": ""
     }
   }
