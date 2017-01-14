@@ -1,7 +1,6 @@
-lock '3.4.0'
+lock '3.7.0'
 
 set :application, 'response-network-router'
-set :scm, :git
 set :repo_url, ENV.fetch('REPO', 'https://gitlab.com/welp/solidarity.git')
 set :branch, ENV.fetch('BRANCH', 'master')
 
