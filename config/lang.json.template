@@ -29,16 +29,16 @@
   },
   "voice": {
     "welcome": {
-      "spa": [
-        "",
-        "",
-        ""
-      ],
-      "eng": [
-        "",
-        "",
-        ""
-      ]
+      "spa": "",
+      "eng": ""
+    },
+    "prompt": {
+      "spa": "",
+      "eng": ""
+    },
+    "instructions": {
+      "spa": "",
+      "eng": ""
     },
     "confirmation": {
       "spa": "",
