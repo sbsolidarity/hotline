@@ -2,8 +2,9 @@
   "account_sid": "",
   "audio_callback": "/audio",
   "auth_token": "",
-  "confirmatio_callback": "/confirm",
+  "confirmation_callback": "/confirm",
   "phone_number": "",
+  "select_lang_callback": "",
   "sms_callback": "/sms",
   "voice_callback": "/voice"
 }

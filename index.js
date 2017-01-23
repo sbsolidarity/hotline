@@ -18,8 +18,8 @@ app.get('/', handle.root)
 app.post(TWILIO.audio_callback, multer().array(), handle.audio)
 app.post(TWILIO.confirmation_callback, multer().array(), handle.confirmation)
 app.post(TWILIO.select_lang_callback, multer().array(), handle.select_lang)
-app.post(TWILIO.sms, multer().array(), handle.sms)
-app.post(TWILIO.voice, multer().array(), handle.welcome)
+app.post(TWILIO.sms_callback, multer().array(), handle.sms)
+app.post(TWILIO.voice_callback, multer().array(), handle.welcome)
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
