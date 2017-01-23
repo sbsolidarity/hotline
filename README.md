@@ -2,22 +2,55 @@
 
 ## Development
 
-1. Create a Twilio account
-   - `cp config/twilio.json.template config/twilio.json` and fill in
-     the fields
+1. `brew install node redis` (or equivalent).
 
-2. Create a Google account and create an OAuth credential at
-   <https://console.developers.google.com/apis/credentials>
-   - `cp config/google.json.template config/google.json` and add the
-     client ID and client secret.
-   - `brew install coffeescript`
-   - `git clone https://github.com/cage1016/google-access-token.git sandbox/access`
-   - `cd sandbox/access && npm i && make build && bin/gtoken`
-   - `gtoken` will prompt you for your Google API client ID and client
-     secret, as well as the scopes you need (`drive,spreadsheets`).
-     Then it starts a server; go to it and it will authorize the
-     application to use your Google account.  Copy the JSON returned
-     by the successful authorization and add it to `config/google.json`.
+1. `brew services redis start` (or equivalent).
+
+1. Create a Twilio account and generate a phone number with SMS and
+   Voice capabilities
+
+    `cp config/twilio.json.template config/twilio.json`
+
+    And fill it in with your Twilio Account SID, Auth Token, and phone
+    number (including the `+` and country code).
+
+1. Create a Google account and a project at
+   <https://console.developers.google.com/apis/credentials>.
+
+    1. In the API Library, active the Sheets and Drive API.
+
+    2. In “Authorized redirect URIs”, add `http://127.0.0.1:3000/callback`.
+
+    2. Create an OAuth client ID and download the credentials.
+
+    3. `cp config/google.json.template config/google.json` and add the
+       client ID and client secret.
+
+    4. `brew install coffeescript`
+
+    5. `git clone https://github.com/cage1016/google-access-token.git sandbox/access`
+
+    6. `cd sandbox/access && npm i && make build && bin/gtoken`
+
+    7. `gtoken` will prompt you for your Google API client ID and
+       client secret, as well as the scopes you need
+       (`drive,spreadsheets`).  Then it starts a server; go to it and
+       it will authorize the application to use your Google account.
+       Copy the JSON returned by the successful authorization and add
+       it to `config/google.json`.
+
+    8. In Google Drive, create a primary folder, and copy its ID (from
+       the URL) to `reports_folder_id` in `config/google.json`.
+       _Within_ that folder, create another for the audio recordings.
+       Copy its ID to `recordings_folder_id`.
+
+1. Install a localhost tunnelling application like ngrok (`brew cask
+   install ngrok`) and start it (i.e., `nkgrok http 3000`).
+
+1. Copy `config/application.json.template` to
+   `config/application.json` and add the hostname assigned by ngrok.
+
+1. In the Twilio phone number management page,
 
 ### Config files
 
