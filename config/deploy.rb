@@ -1,6 +1,6 @@
 lock '3.7.0'
 
-set :application, 'response-network-router'
+set :application, 'SBS'
 set :repo_url, ENV.fetch('REPO', 'https://gitlab.com/welp/solidarity.git')
 set :branch, ENV.fetch('BRANCH', 'master')
 
