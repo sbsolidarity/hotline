@@ -1,4 +1,5 @@
 /config/*.json
+/config/nginx
 /db
 /log
 /node_modules

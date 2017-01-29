@@ -9,7 +9,7 @@
   <meta property="og:type" content="website" />
   <!-- http://stackoverflow.com/a/6204025 -->
   <meta name="description" property="og:description" content="<%= short_desc %>" />
-  <meta property="og:url" content="https://www.sbsolidarity.org/" />
+  <meta property="og:url" content="<%= homepage %>" />
 
   <title><%= title %></title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -20,7 +20,7 @@
   <![endif]-->
 </head>
 <body>
-<header><h1 id="sb-solidarity"><%= title %></h1></header>
+<header><h1><%= title %></h1></header>
 <p class="instructions"><%- instructions %></p>
 <p class="description"><%= long_desc %></p>
 <footer><a href="https://gitlab.com/welp/solidarity">Source code</a> released under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL</a>.</footer>

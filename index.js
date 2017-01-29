@@ -14,7 +14,7 @@
 // License along with SBS.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-const PORT = 3030
+const PORT = 3000
 
 // configuration settings for the Twilio API
 const TWILIO = require('./config/twilio.json')
