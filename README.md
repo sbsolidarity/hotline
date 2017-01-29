@@ -1,4 +1,8 @@
-# Response Network Router
+# SBS
+
+SBS is a simple web application for running a phone-based reporting
+system.  Voicemails and texts are saved and sorted into Google Drive
+for processing and followup.
 
 ## Development
 
