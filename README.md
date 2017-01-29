@@ -50,7 +50,12 @@
 1. Copy `config/application.json.template` to
    `config/application.json` and add the hostname assigned by ngrok.
 
-1. In the Twilio phone number management page,
+1. In the Twilio phone number management page, set the Voice Webhook
+   to be the ngrok hostname plus the value of `voice_callback` in
+   `config/twilio.json`.  Set the Messaging Webhook to be the ngrok
+   hostname plus the value of `sms_callback` in `config/twilio.json`.
+
+1. Start the application locally with `node index.js`
 
 ### Config files
 
