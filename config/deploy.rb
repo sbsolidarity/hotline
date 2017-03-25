@@ -13,8 +13,6 @@ set :linked_files,
       config/twilio.json
     )
 
-set :linked_dirs, %w(.well-known)
-
 set :stages, %w(production)
 set :default_stage, 'production'
 
