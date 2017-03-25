@@ -1,0 +1,14 @@
+---
+- name: update all yum packages
+  yum:
+    name: "*"
+    state: latest
+    update_cache: yes
+
+- name: install tools
+  yum:
+    name: "{{ item }}"
+  with_items:
+    - nodejs
+    - openssl-devel
+    - redis

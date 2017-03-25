@@ -1,0 +1,25 @@
+---
+- name: ensure {{ app_dir }}/shared/config exists
+  file:
+    group: nginx
+    owner: "{{ deploy_user }}"
+    path: "{{ app_dir }}/shared/config"
+    state: directory
+
+- name: install application config
+  template:
+    dest: "{{ app_dir }}/shared/config/application.json"
+    group: nginx
+    owner: "{{ deploy_user }}"
+    src: application.json.j2
+
+- name: install other config templates
+  copy:
+    dest: "{{ app_dir }}/shared/config/{{ item }}"
+    group: nginx
+    owner: "{{ deploy_user }}"
+    src: "{{ item }}"
+  with_items:
+    - google.json
+    - lang.json
+    - twilio.json

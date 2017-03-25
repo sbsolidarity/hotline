@@ -1,0 +1,12 @@
+---
+- name: update ssh config
+  template:
+    dest: /etc/ssh/sshd_config
+    group: root
+    mode: 0400
+    owner: root
+    src: sshd_config.j2
+  notify:
+  - restart sshd
+
+- meta: flush_handlers

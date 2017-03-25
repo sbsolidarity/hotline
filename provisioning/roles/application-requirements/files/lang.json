@@ -1,0 +1,52 @@
+{
+  "website": {
+    "title": {
+      "spa": "",
+      "eng": ""
+    },
+    "short_desc": {
+      "spa": "",
+      "eng": ""
+    },
+    "long_desc": {
+      "spa": "",
+      "eng": ""
+    },
+    "instructions": {
+      "spa": "",
+      "eng": ""
+    }
+  },
+  "sms": {
+    "confirmation": {
+      "spa": "",
+      "eng": ""
+    },
+    "error": {
+      "spa": "",
+      "eng": ""
+    }
+  },
+  "voice": {
+    "welcome": {
+      "spa": "",
+      "eng": ""
+    },
+    "prompt": {
+      "spa": "",
+      "eng": ""
+    },
+    "instructions": {
+      "spa": "",
+      "eng": ""
+    },
+    "confirmation": {
+      "spa": "",
+      "eng": ""
+    },
+    "error": {
+      "spa": "",
+      "eng": ""
+    }
+  }
+}

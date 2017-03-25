@@ -1,0 +1,27 @@
+---
+- name: Provision a CentOS server for SBS
+  remote_user: root
+  hosts: all
+
+  vars_prompt:
+    - name: keyfile
+      default: ~/.ssh/id_rsa.pub
+      prompt: Path to SSH public key
+
+    - name:  deploy_user
+      default: deploy
+      prompt: Name of deploy user
+
+    - name: deploy_pass
+      confirm: yes
+      encrypt: sha512_crypt
+      private: yes
+      prompt: Password for deploy user
+      salt_size: 7
+
+  roles:
+    - { role: set-timezone }
+    - { role: create-users }
+    - { role: application-requirements }
+    - { role: configure-server }
+    - { role: security }

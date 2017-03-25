@@ -1,0 +1,51 @@
+---
+- name: add EPEL repo
+  yum:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+- name: install Phusion Passenger repo
+  get_url:
+    url: https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
+    checksum: sha256:{{ passenger_sha }}
+    dest: /etc/yum.repos.d/passenger.repo
+
+- name: update all yum packages
+  yum:
+    name: "*"
+    state: latest
+    update_cache: yes
+
+- name: install software
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - curl-devel
+    - git
+    - nginx
+    - openssl-devel
+    - passenger
+    # for acme-tiny
+    - python34-devel
+    # https://www.phusionpassenger.com/library/walkthroughs/deploy/nodejs/ownserver/nginx/oss/el7/install_passenger.html
+    - pygpgme
+    - ruby
+
+- name: remove app.conf
+  file:
+    path: /etc/nginx/conf.d/app.conf
+    state: absent
+
+- name: start Nginx
+  systemd:
+    name: nginx
+    state: started
+
+- name: clone acme-tiny repository
+  git:
+    repo: https://github.com/diafygi/acme-tiny.git
+    dest: /home/{{ deploy_user }}/acme-tiny
+    # This is the latest commit; update as necessary
+    version: daba51d37efd7c1f205f9da383b9b09968e30d29
+  become: true
+  become_user: "{{ deploy_user }}"
