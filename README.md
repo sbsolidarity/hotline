@@ -147,3 +147,41 @@ The path Twilio will send its initial SMS requests to.  See
 
 The path Twilio will send its initial Voice requests to.  See
 <https://www.twilio.com/docs/api/twiml/twilio_request>.
+
+## Running in production
+
+The `provisioning` subdirectory contains an Ansible playbook for
+setting up a CentOS/RedHat server with everything necessary to deploy
+SBS in a production environment.
+
+1. `brew install ansible` or equivalent (requires version 2.2 or
+   higher, with [passlib](http://pypi.python.org/pypi/passlib)
+   available).
+
+3. Edit `playbook/inventory` and set `ansible_ssh_host` to the
+   hostname of your SBS instance.
+
+2. `cd provisioning && ansible-playbook -i inventory sbs.yml`
+
+    Ansible will prompt you for three pieces of information:
+
+      1. The location of the SSH public key that’s in the remote
+         server’s `/root/.ssh/authorized_keys`.
+
+      2. The name of a non-root user to deploy with (defaults to
+         `deploy`).
+
+      3. The password for the deploy user.
+
+If all goes well, Ansible will install and configure the software
+needed to run SBS, as well as creating a TLS certificate for the
+hostname you specified.
+
+After Ansible finishes, you can deploy SBS to your server with
+Capistrano:
+
+```shell
+bundle install
+export SERVER=sbs-instance.com # replace this value with the hostname of your server
+bundle exec cap production deploy
+```
