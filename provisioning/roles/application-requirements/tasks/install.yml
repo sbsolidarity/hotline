@@ -12,3 +12,9 @@
     - nodejs
     - openssl-devel
     - redis
+
+- name: start Redis
+  systemd:
+    enabled: yes
+    name: redis
+    state: started
