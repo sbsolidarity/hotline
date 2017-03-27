@@ -22,3 +22,9 @@
     enabled: yes
     name: nginx
     state: restarted
+
+- name: schedule Nginx to restart after certificate renewal
+  cron:
+    job: "systemctl restart nginx"
+    name: restart Nginx
+    special_time: monthly
