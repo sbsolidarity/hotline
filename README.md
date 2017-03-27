@@ -165,11 +165,11 @@ SBS in a production environment.
 
     Ansible will prompt you for three pieces of information:
 
-      1. The location of the SSH public key that’s in the remote
-         server’s `/root/.ssh/authorized_keys`.
+      1. The location of the SSH public key that Capistrano will use
+         to deploy with;
 
       2. The name of a non-root user to deploy with (defaults to
-         `deploy`).
+         `deploy`);
 
       3. The password for the deploy user.
 
@@ -177,8 +177,9 @@ If all goes well, Ansible will install and configure the software
 needed to run SBS, as well as creating a TLS certificate for the
 hostname you specified.
 
-After Ansible finishes, you can deploy SBS to your server with
-Capistrano:
+After Ansible finishes, you’ll want to add the production values to
+the config files in `/var/www/shared/config/` on the remote server.
+Then you can deploy SBS to your server with Capistrano:
 
 ```shell
 bundle install
