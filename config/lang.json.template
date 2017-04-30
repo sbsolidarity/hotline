@@ -28,18 +28,6 @@
     }
   },
   "voice": {
-    "welcome": {
-      "spa": "",
-      "eng": ""
-    },
-    "prompt": {
-      "spa": "",
-      "eng": ""
-    },
-    "instructions": {
-      "spa": "",
-      "eng": ""
-    },
     "confirmation": {
       "spa": "",
       "eng": ""
