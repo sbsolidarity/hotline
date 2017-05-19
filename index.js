@@ -30,12 +30,27 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/public'))
 
 const handle = require('./lib/handlers.js')
-app.get('/', handle.root)
-app.post(TWILIO.audio_callback, multer().array(), handle.audio)
-app.post(TWILIO.confirmation_callback, multer().array(), handle.confirmation)
-app.post(TWILIO.select_lang_callback, multer().array(), handle.select_lang)
-app.post(TWILIO.sms_callback, multer().array(), handle.sms)
-app.post(TWILIO.voice_callback, multer().array(), handle.welcome)
+app.get('/', handle.web_root)
+
+app.post(TWILIO.audio_callback,
+         multer().array(),
+         handle.audio_processed)
+
+app.post(TWILIO.confirmation_callback,
+         multer().array(),
+         handle.message_left)
+
+app.post(TWILIO.select_lang_callback,
+         multer().array(),
+         handle.language_selected)
+
+app.post(TWILIO.sms_callback,
+         multer().array(),
+         handle.sms_received)
+
+app.post(TWILIO.voice_callback,
+         multer().array(),
+         handle.call_received)
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
