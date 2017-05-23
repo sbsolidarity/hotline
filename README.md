@@ -45,8 +45,9 @@ for processing and followup.
 
     8. In Google Drive, create a primary folder, and copy its ID (from
        the URL) to `reports_folder_id` in `config/google.json`.
-       _Within_ that folder, create another for the audio recordings.
-       Copy its ID to `recordings_folder_id`.
+       _Within_ that folder, create two more for audio recordings and
+       media attachments.  Copy their IDs to `recordings_folder_id`
+       and `attachments_folder_id`.
 
 1. Install a localhost tunnelling application like ngrok (`brew cask
    install ngrok`) and start it (i.e., `nkgrok http 3000`).
