@@ -15,7 +15,7 @@
 
 source 'https://rubygems.org'
 
-gem 'capistrano', '3.7.0'
+gem 'capistrano', '~> 3.8.0'
 gem 'capistrano-npm'
 gem 'capistrano-passenger'
 gem 'highline'
