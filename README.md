@@ -55,6 +55,10 @@ for processing and followup.
 1. Copy `config/application.json.template` to
    `config/application.json` and add the hostname assigned by ngrok.
 
+1. Copy `config/responders.json.template` to `config/responders.json`
+   and add the phone numbers that should be notified when new reports
+   are added.
+
 1. In the Twilio phone number management page, set the Voice Webhook
    to be the ngrok hostname plus the value of `voice_callback` in
    `config/twilio.json`.  Set the Messaging Webhook to be the ngrok
@@ -148,6 +152,11 @@ The path Twilio will send its initial SMS requests to.  See
 
 The path Twilio will send its initial Voice requests to.  See
 <https://www.twilio.com/docs/api/twiml/twilio_request>.
+
+#### responders.json
+
+An array of phone numbers (with `+1` or other country code, plus area
+code) that should be notified upon receipt of new reports.
 
 ## Running in production
 
