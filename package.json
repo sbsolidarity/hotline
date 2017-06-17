@@ -20,7 +20,7 @@
     "multer": "1.2.x",
     "normalize.css": "5.x.x",
     "redis": "2.6.x",
-    "twilio": "2.11.x"
+    "twilio": "3.4.x"
   },
   "devDependencies": {},
   "repository": {
