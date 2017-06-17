@@ -10,6 +10,7 @@ set :linked_files,
       config/application.json
       config/google.json
       config/lang.json
+      config/responders.json
       config/twilio.json
     ]
 
