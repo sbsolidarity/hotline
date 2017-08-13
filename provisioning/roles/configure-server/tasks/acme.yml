@@ -10,6 +10,7 @@
     state: directory
   with_items:
     - /home/{{ deploy_user }}/acme
+    - /home/{{ deploy_user }}/log
     - /usr/share/nginx/html/.well-known/acme-challenge
 
 - name: create TLS user private key
