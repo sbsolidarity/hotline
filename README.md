@@ -4,6 +4,19 @@ SBS is a simple web application for running a phone-based reporting
 system.  Voicemails and texts are saved and sorted into Google Drive
 for processing and followup.
 
+## Basic end-user instructions
+
+Provide the phone number to individuals you want to hear from!  They
+can call or text to leave reports about whatever your organization is
+interested in collecting data on.
+
+People who’ve been added to [`responders.json`](#responders.json) will
+be notified when new reports come in, and can block phone numbers that
+are spamming the hotline.  Just text e.g. `block 15551112222` and
+future contact from that number will be ignored.  Text `unblock
+15551112222` to undo the block, and text `blocks` to see a list of
+blocked numbers.
+
 ## Development
 
 1. `brew install node redis` (or equivalent).
@@ -156,7 +169,8 @@ The path Twilio will send its initial Voice requests to.  See
 #### responders.json
 
 An array of phone numbers (with `+1` or other country code, plus area
-code) that should be notified upon receipt of new reports.
+code) that should be notified upon receipt of new reports, and are
+empowered to block (and unblock) phone numbers.
 
 ## Running in production
 

@@ -19,7 +19,7 @@
     "moment-timezone": "0.5.x",
     "multer": "1.2.x",
     "normalize.css": "5.x.x",
-    "redis": "2.6.x",
+    "redis": "2.8.x",
     "twilio": "3.4.x"
   },
   "devDependencies": {},
