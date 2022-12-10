@@ -13,7 +13,7 @@
     "async": "2.4.x",
     "body-parser": "^1.18.3",
     "ejs": "2.5.x",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "franc": "2.0.x",
     "googleapis": "^36.0.0",
     "moment-timezone": "0.5.x",
